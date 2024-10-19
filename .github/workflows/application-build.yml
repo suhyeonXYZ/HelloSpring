@@ -43,7 +43,7 @@ jobs:
         id: docker_tag
         run: |
           if [[ "${{ github.ref }}" == refs/tags/* ]]; then
-            IMAGE_TAG=${{ github.ref }}  
+            IMAGE_TAG=${{ github.ref }}
             IMAGE_TAG=${IMAGE_TAG#refs/tags/}  # "refs/tags/" 부분 제거
           else
             IMAGE_TAG=latest  # 메인 브랜치에서는 latest 사용
@@ -58,4 +58,4 @@ jobs:
       - name: Push Docker image
         run: |
           echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-          docker push ${{ secrets.DOCKER_USERNAME }}/hellospring:${{ steps.docker_tag.outputs.tag }}
+          docker push ${{ secrets.DOCKER_USERNAME }}/hellospring:${{ env.TAG }}
