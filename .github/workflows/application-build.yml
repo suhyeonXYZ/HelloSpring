@@ -5,6 +5,8 @@ on:
     branches:
       - main
       - 'feature/*'
+    tags:
+      - 'v*'
   pull_request:
     branches:
       - main
@@ -41,11 +43,11 @@ jobs:
         id: docker_tag
         run: |
           if [[ "${{ github.ref }}" == refs/tags/* ]]; then
-            IMAGE_TAG=${{ github.ref_name }}  # 태그명으로 설정 (예: v1.0.0)
+            IMAGE_TAG=${{ github.ref_name }}  # 태그명으로 설정
           else
-            IMAGE_TAG=latest  # 메인 브랜치에서는 latest 사용
+            IMAGE_TAG=latest
           fi
-          echo "::set-output name=tag::$IMAGE_TAG"
+          echo "TAG=${IMAGE_TAG}" >> $GITHUB_ENV  # 환경 파일에 저장
 
       - name: Build Docker image
         run: |
