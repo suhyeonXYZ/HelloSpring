@@ -43,15 +43,17 @@ jobs:
         id: docker_tag
         run: |
           if [[ "${{ github.ref }}" == refs/tags/* ]]; then
-            IMAGE_TAG=${{ github.ref_name }}  # 태그명으로 설정
+            IMAGE_TAG=${{ github.ref }}  
+            IMAGE_TAG=${IMAGE_TAG#refs/tags/}  # "refs/tags/" 부분 제거
           else
-            IMAGE_TAG=latest
+            IMAGE_TAG=latest  # 메인 브랜치에서는 latest 사용
           fi
-          echo "TAG=${IMAGE_TAG}" >> $GITHUB_ENV  # 환경 파일에 저장
+          echo "TAG=${IMAGE_TAG}" >> $GITHUB_ENV  # 환경 변수에 TAG 저장
 
       - name: Build Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/hellospring:${{ steps.docker_tag.outputs.tag }} .
+          echo "Building Docker image with tag: ${{ env.TAG }}"
+          docker build -t hellospring:${{ env.TAG }} .
 
       - name: Push Docker image
         run: |
