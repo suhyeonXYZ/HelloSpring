@@ -6,7 +6,8 @@ on:
       - main
       - 'feature/*'
     tags:
-      - v*
+      - v2.*
+      - v1.*
   pull_request:
     branches:
       - main
