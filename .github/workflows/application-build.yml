@@ -53,7 +53,7 @@ jobs:
       - name: Build Docker image
         run: |
           echo "Building Docker image with tag: ${{ env.TAG }}"
-          docker build -t hellospring:${{ env.TAG }} .
+          docker build -t ${{ secrets.DOCKER_USERNAME }}hellospring:${{ env.TAG }} .
 
       - name: Push Docker image
         run: |
