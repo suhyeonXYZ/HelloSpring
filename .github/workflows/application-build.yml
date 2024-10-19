@@ -26,11 +26,11 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-          ./gradlew sonarqube -Dsonar.host.url=https://sonarqube-instance.com -Dsonar.projectKey=your_project_key -Dsonar.login=${{ secrets.SONAR_TOKEN }}
-
+          ./gradlew sonarqube -Dsonar.host.url=${{ secrets.SONARQUBE_URL }} -Dsonar.projectKey=your_project_key -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+  
   build-and-push-docker:
     runs-on: ubuntu-latest
-#    needs: sonarqube-analysis
+    needs: sonarqube-analysis  # SonarQube 분석 후 실행
     if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/')
 
     steps:
@@ -41,20 +41,20 @@ jobs:
         id: docker_tag
         run: |
           if [[ "${{ github.ref }}" == refs/tags/* ]]; then
-            IMAGE_TAG=${{ github.ref_name }}  # Tag name (e.g., v1.0.0)
+            IMAGE_TAG=${{ github.ref_name }}  # 태그명으로 설정 (예: v1.0.0)
           else
-            IMAGE_TAG=latest  # Use latest for main branch
+            IMAGE_TAG=latest  # 메인 브랜치에서는 latest 사용
           fi
-          echo "tag=${IMAGE_TAG}" >> $GITHUB_ENV
+          echo "::set-output name=tag::$IMAGE_TAG"
 
       - name: Build Docker image
+        run: |
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/hellospring:${{ steps.docker_tag.outputs.tag }} .
+
+      - name: Push Docker image
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         run: |
-          docker build -t $DOCKER_USERNAME/hellospring:${{ env.tag }} .
-
-      - name: Push Docker image
-        run: |
           echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-          docker push $DOCKER_USERNAME/hellospring:${{ env.tag }}
+          docker push ${{ secrets.DOCKER_USERNAME }}/hellospring:${{ steps.docker_tag.outputs.tag }}
