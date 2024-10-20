@@ -4,20 +4,16 @@ on:
   push:
     branches:
       - main
-      - 'feature/*'
-    tags:
-      - v*
-  pull_request:
-    branches:
-      - main
+    pull_request:
+      branches:
+        - main
 
 jobs:
   sonarqube-analysis:
     runs-on: ubuntu-latest
-
     steps:
       - name: Check out code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v2
 
       - name: Set up JDK 
         uses: actions/setup-java@v2
@@ -29,34 +25,25 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
           ./gradlew sonarqube -Dsonar.host.url=${{ secrets.SONARQUBE_URL }} -Dsonar.projectKey=your_project_key -Dsonar.login=${{ secrets.SONAR_TOKEN }}
-  
+
   build-and-push-docker:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/')
-
     steps:
       - name: Check out code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v2
 
       - name: Set Docker image tag
-        env:
-          GITHUB_TOKEN: ${{ secrets. PATNAME }}
         id: docker_tag
         run: |
-          if [[ "${{ github.ref }}" == refs/tags/* ]]; then
-            IMAGE_TAG=${{ github.ref }}  
-            IMAGE_TAG=${IMAGE_TAG#refs/tags/}  # "refs/tags/" 부분 제거
-          else
-            IMAGE_TAG=latest  # 메인 브랜치에서는 latest 사용
-          fi
-          echo "TAG=${IMAGE_TAG}" >> $GITHUB_ENV  # 환경 변수에 TAG 저장
+          IMAGE_TAG=$(git describe --tags --always)
+          echo "IMAGE_TAG=${IMAGE_TAG}" >> $GITHUB_ENV
 
       - name: Build Docker image
         run: |
-          echo "Building Docker image with tag: ${{ env.TAG }}"
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/hellospring:${{ env.TAG }} .
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/hellospring:${{ env.IMAGE_TAG }} .
 
       - name: Push Docker image
         run: |
           echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-          docker push ${{ secrets.DOCKER_USERNAME }}/hellospring:${{ env.TAG }}
+          docker push ${{ secrets.DOCKER_USERNAME }}/hellospring:${{ env.IMAGE_TAG }}
+          docker push ${{ secrets.DOCKER_USERNAME }}/hellospring:latest
