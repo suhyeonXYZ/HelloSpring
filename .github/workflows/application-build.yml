@@ -32,8 +32,10 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v2
         with:
-          ref: refs/tags/$(git tag | sort -V | tail -n 1)  # 최신 태그를 지정
-          fetch-depth: 1  # 가장 최근 커밋만 가져옵니다.
+          fetch-depth: 1  # 최신 커밋만 가져옵니다.
+
+      - name: Fetch all tags
+        run: git fetch --tags  # 모든 태그를 가져옵니다.
 
       - name: Set Docker image tag
         id: docker_tag
