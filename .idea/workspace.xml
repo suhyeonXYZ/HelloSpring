@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17d145cc-4f48-4a70-8cfa-390fa2f40708" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gradle/8.7/checksums/checksums.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/8.7/checksums/md5-checksums.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/8.7/checksums/sha1-checksums.bin" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.gradle/8.7/dependencies-accessors/gc.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.gradle/8.7/executionHistory/executionHistory.bin" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.gradle/8.7/executionHistory/executionHistory.lock" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.gradle/8.7/fileChanges/last-build.bin" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.lock" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.gradle/8.7/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.gradle/8.7/gc.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
@@ -21,85 +17,18 @@
       <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/demo/DemoApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/demo/controller/HelloController$Hello.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/demo/controller/HelloController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/demo/controller/HomeController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/demo/controller/MemberController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/demo/controller/MembersForm.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/demo/domain/Member.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/demo/repository/MemberRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/demo/repository/MemoryMemberRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/demo/service/MemberService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/demo/service/SpringConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/demo/swagger/SwaggerConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/test/com/example/demo/DemoApplicationTests.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/test/com/example/demo/repository/MemoryMemberRepositoryTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/test/com/example/demo/service/MemberServiceTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/libs/demo-0.0.1-SNAPSHOT-plain.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/libs/demo-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.example.demo.DemoApplicationTests.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.example.demo.repository.MemoryMemberRepositoryTest.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.example.demo.service.MemberServiceTest.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/css/base-style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/js/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.example.demo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.example.demo.repository.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.example.demo.service.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resolvedMainClassName" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/static/hello-static.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/static/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/templates/hello-templates.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/templates/hello.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/templates/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/templates/members/createMembersForm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/templates/members/listMembers.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.example.demo.DemoApplicationTests.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.example.demo.repository.MemoryMemberRepositoryTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.example.demo.service.MemberServiceTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/bootJar/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/demo/DemoApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/demo/controller/HelloController$Hello.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/demo/controller/HelloController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/demo/controller/HomeController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/demo/controller/MemberController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/demo/controller/MembersForm.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/demo/domain/Member.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/demo/repository/MemberRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/demo/repository/MemoryMemberRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/demo/service/MemberService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/demo/service/SpringConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/demo/swagger/SwaggerConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/resources/static/hello-static.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/resources/static/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/resources/templates/hello-templates.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/resources/templates/hello.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/resources/templates/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/resources/templates/members/createMembersForm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/resources/templates/members/listMembers.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/test/classes/com/example/demo/DemoApplicationTests.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/test/classes/com/example/demo/repository/MemoryMemberRepositoryTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/test/classes/com/example/demo/service/MemberServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.7/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/hello-templates 2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,6 +86,7 @@
     "Application.DemoApplication.executor": "Run",
     "DefaultHtmlFileTemplate": "HTML File",
     "Gradle.Build hello-spring.executor": "Run",
+    "Gradle.hellospring [:com.example.demo.DemoApplication.main()].executor": "Run",
     "JUnit.MemberServiceTest.findMembers.executor": "Run",
     "JUnit.MemberServiceTest.join.executor": "Run",
     "JUnit.MemoryMemberRepositoryTest.executor": "Run",
@@ -171,9 +101,9 @@
     "Spring Boot.DemoApplication.executor": "Run",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "Rebasing main",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/songsuhyeon/Documents/HelloSpring/build.gradle",
+    "last_opened_file_path": "/Users/songsuhyeon/Documents/hellospring/build.gradle",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
